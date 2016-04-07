@@ -30,6 +30,7 @@ public class Magpie2
 	 */
 	public String getResponse(String statement)
 	{
+        statement = statement.toLowerCase();
 		String response = "";
 		if (statement.indexOf("no") >= 0)
 		{
@@ -42,7 +43,23 @@ public class Magpie2
 		{
 			response = "Tell me more about your family.";
 		}
-		else
+        else if (statement.indexOf("elias") >= 0 ||
+                statement.indexOf("anna") >= 0 ||
+                statement.indexOf("shan") >= 0)
+        {
+            response = "WOAH HO HO HO HO I JUST HEARD THE NAME OF A DANK CODER!!!";
+        }
+        else if (statement.indexOf("cats") >= 0){
+            response = "Meow!";
+        }
+        else if (statement.indexOf("imagine") >= 0){
+            response = "Get real!";
+        }
+
+
+
+
+        else
 		{
 			response = getRandomResponse();
 		}

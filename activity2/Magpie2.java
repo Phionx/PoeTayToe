@@ -96,4 +96,10 @@ public class Magpie2
 
 		return response;
 	}
+
+    /*
+     * Since the string is searched character by character, if the string
+     * contains a keyword (whether or not it is a seperate word) it will react
+     * the same way. So "know" and "no" will get the same response if "no" is
+     * the keyword*/
 }
